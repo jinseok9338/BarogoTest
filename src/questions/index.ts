@@ -1,6 +1,6 @@
-import { VendingMachineState } from "../BaseData";
-import { STOCKS, VALID_COINS } from "../consts";
-import { formatPrice } from "../helper";
+import { VendingMachineState } from "../BaseData/index.js";
+import { STOCKS, VALID_COINS } from "../consts.js";
+import { formatPrice } from "../helper/index.js";
 
 export const paymentMethodQuestion = () => {
   return {

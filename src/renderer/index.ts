@@ -1,11 +1,11 @@
-import { PageId, VendingMachineState } from "../BaseData";
+import { PageId, VendingMachineState } from "../BaseData/index.js";
 import {
   renderChooseBeveragePage,
   renderInsertCoinPage,
   renderLandingPage,
   renderMainMenuPage,
   terminatePage,
-} from "./renderers";
+} from "./renderers.js";
 
 export const render = async (state: VendingMachineState) => {
   while (true) {

@@ -1,12 +1,16 @@
 import inquirer from "inquirer";
-import { PageId, PaymentMethod, VendingMachineState } from "../BaseData";
-import { STOCKS } from "../consts";
+import {
+  PageId,
+  PaymentMethod,
+  VendingMachineState,
+} from "../BaseData/index.js";
+import { STOCKS } from "../consts.js";
 import {
   ChooseBeveragePageQuestion,
   InsertCoinPageQuestion,
   MainPageQuestion,
   paymentMethodQuestion,
-} from "../questions";
+} from "../questions/index.js";
 
 // 결제 수단 페이지 렌더링
 export const renderLandingPage = async (state: VendingMachineState) => {
@@ -63,6 +67,7 @@ export const renderMainMenuPage = async (state: VendingMachineState) => {
           state.paymentAmount +
           "원 입니다."
       );
+      break;
     }
     default:
       terminatePage("잘못된 페이지로 접근하셨습니다");
@@ -107,6 +112,10 @@ export const renderChooseBeveragePage = async (state: VendingMachineState) => {
     (stock) => stock.name === selectedBeverage
   )?.price;
 
+  if (!selectedBeveragePrice) {
+    terminatePage("잘못된 음료를 선택하셨습니다");
+    return;
+  }
   state.subtractPaymentAmount(selectedBeveragePrice);
   console.log("거스름돈은 " + state.paymentAmount + "원 입니다.");
   state.setCurrentPageId(PageId.MainMenuPage);
