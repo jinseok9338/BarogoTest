@@ -36,20 +36,16 @@ export class VendingMachineState implements BaseState {
     this.currentPageId = BASE_STATE.currentPageId;
   }
 
-  public get() {
-    return {
-      paymentMethod: this.paymentMethod,
-      paymentAmount: this.paymentAmount,
-      currentPageId: this.currentPageId,
-    };
-  }
-
   public setPaymentMethod(paymentMethod: PaymentMethod) {
     this.paymentMethod = paymentMethod;
   }
 
-  public setPaymentAmount(paymentAmount: number) {
-    this.paymentAmount = paymentAmount;
+  public addPaymentAmount(paymentAmount: number) {
+    this.paymentAmount += paymentAmount;
+  }
+
+  public subtractPaymentAmount(paymentAmount: number) {
+    this.paymentAmount -= paymentAmount;
   }
 
   public setCurrentPageId(currentPageId: number) {
