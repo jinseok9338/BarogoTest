@@ -7,6 +7,18 @@
 - 사용자가 돈을 넣으면 현재 넣은 돈의 합계가 계산됩니다.
 - 사용자가 거래를 완료하면 음료가 발행되거나, 결제가 완료되고 거스름돈이 반환됩니다.
 
+## 설치
+
+repo 를 클론 합니다. 
+``` git clone https://github.com/jinseok9338/BarogoTest.git  ```
+
+dependency 를 설치 합니다.
+``` npm install  ```
+
+실행 시킵니다.
+``` npm start  ```
+
+
 ## 주요 로직
 
 - 기본적으로 상태를 관리하는 state 와 render 를 담당하는 renderer 가 존재 합니다.
