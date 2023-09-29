@@ -12,3 +12,5 @@
 - 기본적으로 상태를 관리하는 state 와 render 를 담당하는 renderer 가 존재 합니다.
 - state 는 결제 수단, 이동 페이지 ID, 현재 투입 금액에 대한 정보를 담고 있습니다.
 - renderer 는 state 를 기반으로 현재 페이지를 렌더링하고 사용자의 선택에 맞게 state 를 변경합니다. (이 부분은 좀 더 역할 분리가 되어도 좋다고 생각합니다. renderer 는 renderer 의 역할에 맞게 흐름을 render 하는 부분만 담당하고 state 를 변경하는 부분은 다른 모듈에서 담당하는 것이 좋을 것 같습니다.)
+
+![무제 001](https://github.com/jinseok9338/BarogoTest/assets/27854958/bc3282e1-47c9-431d-9944-b084875cf7ad)
