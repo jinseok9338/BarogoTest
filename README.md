@@ -18,6 +18,9 @@ dependency 를 설치 합니다.
 실행 시킵니다.
 ``` npm start  ```
 
+* ts-node 와 node 버전 20 과의 충동이 있어서 node 버전을 18 을 쓰는것을 권장
+* inquirier.js 와 ts-node 간의 충돌로 import 를 js 로 해줘야 하는 이슈 발생 (이 부분은 미리 알아채고 다른 library 를 사용했어야 했다)
+
 
 ## 주요 로직
 
